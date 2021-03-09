@@ -32,10 +32,12 @@ Pour cette partie, nous nous sommes appuyé sur le travail de Gilbert Tanner.
 Nous avons récupéré le dataset d'images du site de l'[IFN](https://benchmark.ini.rub.de/gtsdb_dataset.html).
 
 Plusieurs traitements on été nécessaires:
+
 * les informations des images (Path, coordonnées des panneaux, classe des panneaux) dans un fichier .txt
 * format des images en .ppm
 
 Dans un premier temps nous avons travaillé sur ce fichier .txt:
+
 * 
 
 
