@@ -91,6 +91,9 @@ Enfin nous avons réparti les 900 images dans 2 dossiers (750 pour l'entrainemen
 
 ### 3. Génération des TFRecord
 
+Après avoir créé les fichiers *train_labels.csv* et *test_labels.csv*, nous avons converti les fichier CSV en fichiers TFRecords. Pour ce faire, on va ouvrir le fichier [gererate_tfrecord.py](https://github.com/TannerGilbert/Tensorflow-Object-Detection-API-Train-Model/blob/master/generate_tfrecord.py) et remplacer la fonction `class_text_to_int` par un label unique.
 
-
+Ensuite nous pouvons générer les fichiers TFRecord en écrivant:
+`python generate_tfrecord.py --csv_input=images/train_labels.csv --image_dir=images/train --output_path=train.record
+python generate_tfrecord.py --csv_input=images/test_labels.csv --image_dir=images/test --output_path=test.record`
 
