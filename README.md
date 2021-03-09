@@ -171,5 +171,10 @@ Un script modifié du guide utilisé nous a permis de tester nos 2 modèles. Les
 ![image2](images/image2.PNG)
 
 
-### 6. Vidéo
-La partie sur la vidéo n'a pas été ajoutée car au vu des résultats, le traitement de vidéo n'est pas du tout concluant.
+### 6. Détection vidéo
+
+![video_screen1](images/video1)
+
+![video_screen2](images/video2)
+
+Comme on peut le constater, la détection sur vidéo n'est pas optimale. Nous avons remarqué que le modèle de détecte qu'1 seul panneau (ou ce qu'il prend pour un panneau) par frame. Dans la vidéo d'où est tirée la deuxième image, il assimile souvent les feux rouges et feux stop des voitures à des panneau sens interdits. 
