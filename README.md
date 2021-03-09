@@ -56,10 +56,9 @@ Ce qui devrait nous donner si tout se passe bien:
 
 ![install](images/install.PNG)
 
+### 2. Les data
 
-
-
-### Récupération des images et traitement
+#### Récupération des images et traitement
 
 Nous avons récupéré le dataset d'images du site de l'[IFN](https://benchmark.ini.rub.de/gtsdb_dataset.html).
 
@@ -88,6 +87,10 @@ Nous avons donc récupéré le chemin de chaque image, split le nom de celle-ci 
 
 ![image_change](images/image_change.PNG)
 
-### Création du modèle 
+Enfin nous avons réparti les 900 images dans 2 dossiers (750 pour l'entrainement et 150 pour le test) et clivé le fichier csv en 2 fichiers correspondants.
+
+### 3. Génération des TFRecord
+
+
 
 
