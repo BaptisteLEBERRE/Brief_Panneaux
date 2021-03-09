@@ -14,4 +14,4 @@ un *learning rate* de 0.001 et 10 epochs (l'apprentissage atteint un plateau ver
 ![courbe_loss](images/courbe_loss.png)
 
 Le modèle affiche un val_accuracy de 0.9986 et un score de prédiction de 0.9802 ce qui est plus que satisfaisant.
-![epochs](images/epochs)
+![epoch](images/epoch)
