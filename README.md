@@ -54,29 +54,7 @@ Pour tester l'installation:
 
 Ce qui devrait nous donner si tout se passe bien:
 
-`...
-[       OK ] ModelBuilderTF2Test.test_create_ssd_models_from_config
-[ RUN      ] ModelBuilderTF2Test.test_invalid_faster_rcnn_batchnorm_update
-[       OK ] ModelBuilderTF2Test.test_invalid_faster_rcnn_batchnorm_update
-[ RUN      ] ModelBuilderTF2Test.test_invalid_first_stage_nms_iou_threshold
-[       OK ] ModelBuilderTF2Test.test_invalid_first_stage_nms_iou_threshold
-[ RUN      ] ModelBuilderTF2Test.test_invalid_model_config_proto
-[       OK ] ModelBuilderTF2Test.test_invalid_model_config_proto
-[ RUN      ] ModelBuilderTF2Test.test_invalid_second_stage_batch_size
-[       OK ] ModelBuilderTF2Test.test_invalid_second_stage_batch_size
-[ RUN      ] ModelBuilderTF2Test.test_session
-[  SKIPPED ] ModelBuilderTF2Test.test_session
-[ RUN      ] ModelBuilderTF2Test.test_unknown_faster_rcnn_feature_extractor
-[       OK ] ModelBuilderTF2Test.test_unknown_faster_rcnn_feature_extractor
-[ RUN      ] ModelBuilderTF2Test.test_unknown_meta_architecture
-[       OK ] ModelBuilderTF2Test.test_unknown_meta_architecture
-[ RUN      ] ModelBuilderTF2Test.test_unknown_ssd_feature_extractor
-[       OK ] ModelBuilderTF2Test.test_unknown_ssd_feature_extractor
-----------------------------------------------------------------------
-Ran 20 tests in 91.767s
-
-OK (skipped=1)
-Acquiring data`
+![install](images/install.PNG)
 
 
 
