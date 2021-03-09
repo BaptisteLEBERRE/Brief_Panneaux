@@ -36,8 +36,22 @@ Plusieurs traitements on été nécessaires:
 * les informations des images (Path, coordonnées des panneaux, classe des panneaux) dans un fichier .txt
 * format des images en .ppm
 
-Dans un premier temps nous avons travaillé sur ce fichier .txt:
+Dans un premier temps nous avons travaillé sur ce fichier .txt. Nous avons:
 
-* 
+* créé des colonnes qui renseignent les dimentions des images
+* remplacé les classes de panneaux (de 0 à 42) car on veut que ce modèle ne détermine que s'il y a un panneau ou pas <br>
+
+![class_change](images/class_change.PNG)
+
+* remplacé le format de l'image dans le Path pour qu'elles passent de .ppm à .jpeg
+
+![name_change](images/name_change.PNG)
+
+* enregistré la nouvelle database dans un fichier csv
+
+Dans un second temps nous avons procédé au chanement de format pour les images. Pour ce faire nous avons utilisé les modules [os](https://docs.python.org/fr/3/library/os.html), cv2 et [glob](https://docs.python.org/fr/3.6/library/glob.html). 
 
 
+Nous avons donc récupéré le chemin de chaque image, split le nom de celle-ci et enfin remplacé le .ppm par un .jpeg en rajoutant simplement ce dernier.
+
+![image_change](images/image_change.PNG)
