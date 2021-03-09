@@ -151,4 +151,4 @@ Si tout se passe bien on doit voir:
 
 ![train.PNG](images/train.PNG)
 
-
+A partir de cette étape, nous avons utilisé le modèle sauvegardé de Paul, Pereg et Thomas.
