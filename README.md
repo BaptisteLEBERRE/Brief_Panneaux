@@ -95,6 +95,5 @@ Après avoir créé les fichiers *train_labels.csv* et *test_labels.csv*, nous a
 
 Ensuite nous pouvons générer les fichiers TFRecord en écrivant:<br>
 `python generate_tfrecord.py --csv_input=images/train_labels.csv --image_dir=images/train --output_path=train.record
-
 python generate_tfrecord.py --csv_input=images/test_labels.csv --image_dir=images/test --output_path=test.record`
 
