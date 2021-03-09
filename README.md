@@ -152,3 +152,16 @@ Si tout se passe bien on doit voir:
 ![train.PNG](images/train.PNG)
 
 A partir de cette étape, nous avons utilisé le modèle sauvegardé de Paul, Pereg et Thomas.
+
+
+### 5. Recherche de panneau
+
+Le résultat de la recherche de panneau est mitigé. Le modèle de détection arrive à trouver la quasi totalité des panneaux mais la classification est beaucoup moins efficace. 
+
+![image1](images/image1)
+
+![image2](images/images2)
+
+
+
+
