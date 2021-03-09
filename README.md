@@ -173,7 +173,7 @@ Un script modifié du guide utilisé nous a permis de tester nos 2 modèles. Les
 
 ### 6. Détection vidéo
 
-![video_screen1](images/video1.PNG)
+![video_screen1](images/vidéo1.PNG)
 
 ![video_screen2](images/video2.PNG)
 
