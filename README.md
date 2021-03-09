@@ -35,12 +35,14 @@ Tout d'abord nous avons cloné la branche principale du repository de [Tensorflo
 
 **Installation du package pour python**
 
-`cd models/research
+```
+cd models/research
 # Compile protos.
 protoc object_detection/protos/*.proto --python_out=.
 # Install TensorFlow Object Detection API.
 cp object_detection/packages/tf2/setup.py .
-python -m pip install .`
+python -m pip install .
+```
 
 
 
@@ -94,8 +96,10 @@ Enfin nous avons réparti les 900 images dans 2 dossiers (750 pour l'entrainemen
 Après avoir créé les fichiers *train_labels.csv* et *test_labels.csv*, nous avons converti les fichier CSV en fichiers TFRecords. Pour ce faire, on va ouvrir le fichier [gererate_tfrecord.py](https://github.com/TannerGilbert/Tensorflow-Object-Detection-API-Train-Model/blob/master/generate_tfrecord.py) et remplacer la fonction `class_text_to_int` par un label unique.
 
 Ensuite nous pouvons générer les fichiers TFRecord en écrivant:<br>
-```python generate_tfrecord.py --csv_input=images/train_labels.csv --image_dir=images/train --output_path=train.record
-python generate_tfrecord.py --csv_input=images/test_labels.csv --image_dir=images/test --output_path=test.record```
+```
+python generate_tfrecord.py --csv_input=images/train_labels.csv --image_dir=images/train --output_path=train.record
+python generate_tfrecord.py --csv_input=images/test_labels.csv --image_dir=images/test --output_path=test.record
+```
 
 Ces deux commandes vont générer un fichier *train.record* et *test.record*.
 
@@ -106,16 +110,45 @@ Puisque nous utilisons 2 modèles, un pour la classification et un autre pour po
 
 ```
 dico_classes = {
-    1:"Panel"
+    id: 1
+    name: "Panel"
 }
 ```
 
+Ce code va remplacer la fonction dont on parlait dans le point précédant. 
 
+#### Création de la configuration d'entrainement
+Il va falloir créer un fichier de configuration. La [configuration de base](https://github.com/tensorflow/models/blob/master/research/object_detection/configs/tf2/ssd_efficientdet_d0_512x512_coco17_tpu-8.config) pour le modèle se trouve dans le dossier [config/tf2](https://github.com/tensorflow/models/tree/master/research/object_detection/configs/tf2). Nous avons copié ce fichier et l'avons mis dans le dossier training/train.
 
+Les changements suivants ont été effectués:
 
+* Ligne 13: on change le nombre de classes par le nombre d'objets que l'on veut détecter (1 dans notre cas)
 
+* Ligne 141: on change fine_tune_checkpoint par le path du fichier model.ckpt:
+    * fine_tune_checkpoint: "<path>/efficientdet_d0_coco17_tpu-32/checkpoint/ckpt-0"
 
+* Ligne 143: changer fine_tune_checkpoint_type par detection
 
+* Ligne 182: changer input_path par le path du fichier train.records:
+    * input_path: "<path>/train.record"
 
+* Ligne 197: changer input_path par le path du fichier test.records:
+    * input_path: "<path>/test.record"
+
+* Ligne 180 et 193: changer label_map_path par le path du label map:
+    * label_map_path: "<path>/labelmap.pbtxt"
+
+* Ligne 144 et 189: changer batch_size par une valeur appropriée pour notre machine, comme 4, 8, ou 16.
+
+#### Entrainer le modèle
+Pour entrainer le modèle, il faut exécuter la ligne de commande suivante:
+
+```
+python model_main_tf2.py --pipeline_config_path=training/ssd_efficientdet_d0_512x512_coco17_tpu-8.config --model_dir=training --alsologtostderr
+```
+
+Si tout se passe bien on doit voir:
+
+![train.PNG](images/train.PNG)
 
 
