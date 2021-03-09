@@ -169,3 +169,7 @@ Un script modifié du guide utilisé nous a permis de tester nos 2 modèles. Les
 ![image1](images/images1.PNG)
 
 ![image2](images/image2.PNG)
+
+
+### 6. Vidéo
+La partie sur la vidéo n'a pas été ajoutée car au vu des résultats, le traitement de vidéo n'est pas du tout concluant.
