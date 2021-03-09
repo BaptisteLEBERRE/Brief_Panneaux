@@ -158,10 +158,14 @@ A partir de cette étape, nous avons utilisé le modèle sauvegardé de Paul, Pe
 
 Le résultat de la recherche de panneau est mitigé. Le modèle de détection arrive à trouver la quasi totalité des panneaux mais la classification est beaucoup moins efficace. 
 
+Un script modifié du guide utilisé nous a permis de tester nos 2 modèles. Les modèles ont tout d’abord été importés (model_detection et model_classification).
+* Une première fonction (*run_inference_for_single_image*) a permis de modifier les images pour que notre modèle de détection puisse fonctionner. Elles sont converties en Tensor grâce au tf.convert_to_tensor en entrée. La sortie est de retour transformée en array Numpy.
+
+* La deuxième fonction (*create_boxes*) permet de créer les box entourant les panneaux de signalisation détectés par le modèle. L’encadrement de l'image au niveau des panneaux détectés est fixé en taille 30x30 pour utiliser le modèle Classification.
+
+* La dernière fonction (*process_image*) permet simplement d’afficher l’image traitée avec nos deux modèles.
+
+
 ![image1](images/images1.PNG)
 
 ![image2](images/image2.PNG)
-
-
-
-
