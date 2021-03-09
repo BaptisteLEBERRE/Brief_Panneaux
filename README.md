@@ -158,9 +158,9 @@ A partir de cette étape, nous avons utilisé le modèle sauvegardé de Paul, Pe
 
 Le résultat de la recherche de panneau est mitigé. Le modèle de détection arrive à trouver la quasi totalité des panneaux mais la classification est beaucoup moins efficace. 
 
-![image1](images/image1)
+![image1](images/image1.PNG)
 
-![image2](images/images2)
+![image2](images/images2.PNG)
 
 
 
