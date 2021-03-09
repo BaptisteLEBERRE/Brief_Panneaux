@@ -11,7 +11,7 @@ Ensuite, un grand merci à Gilbert Tanner pour son travail sur la détection d'o
 
 Après avoir traité les images, nous avons mis en place un modèle en suivant des exemples d'internet utilisés dans ce genre de projet. Après plus tests, nous avons opté pour
 un *learning rate* de 0.001 et 10 epochs (l'apprentissage atteint un plateau vers les 10 epochs).
-![courbe_loss](images/courbe_loss.png)
+![courbe_loss](images/courbe_loss.PNG)
 
 Le modèle affiche un val_accuracy de 0.9986 et un score de prédiction de 0.9802 ce qui est plus que satisfaisant.
-![epoch](images/epoch)
+![epoch](images/epoch.PNG)
