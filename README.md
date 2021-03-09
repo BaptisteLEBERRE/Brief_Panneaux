@@ -55,3 +55,7 @@ Dans un second temps nous avons procédé au chanement de format pour les images
 Nous avons donc récupéré le chemin de chaque image, split le nom de celle-ci et enfin remplacé le .ppm par un .jpeg en rajoutant simplement ce dernier.
 
 ![image_change](images/image_change.PNG)
+
+### Création du modèle 
+
+
