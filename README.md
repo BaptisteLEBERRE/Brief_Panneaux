@@ -25,7 +25,61 @@ On peut observer qu'il n'y a effectivement aucune erreurs lors du test du modèl
 ![test_panneau](images/test_panneau.PNG)
 
 ## Modèle de détection
-Pour cette partie, nous nous sommes appuyé sur le travail de Gilbert Tanner. 
+Pour cette partie, nous nous sommes appuyé sur le travail de Gilbert Tanner. Plusieurs étapes sont nécessaires.
+
+### 1. Installation
+
+Tout d'abord nous avons cloné la branche principale du repository de [Tensorflow Models](https://github.com/TannerGilbert/Tensorflow-Object-Detection-API-Train-Model)
+
+`git clone https://github.com/tensorflow/models.git`
+
+**Installation du package pour python**
+
+`cd models/research
+# Compile protos.
+protoc object_detection/protos/*.proto --python_out=.
+# Install TensorFlow Object Detection API.
+cp object_detection/packages/tf2/setup.py .
+python -m pip install .`
+
+
+
+https://github.com/protocolbuffers/protobuf/releases
+
+
+
+Pour tester l'installation:
+
+`python object_detection/builders/model_builder_tf2_test.py`
+
+Ce qui devrait nous donner si tout se passe bien:
+
+`...
+[       OK ] ModelBuilderTF2Test.test_create_ssd_models_from_config
+[ RUN      ] ModelBuilderTF2Test.test_invalid_faster_rcnn_batchnorm_update
+[       OK ] ModelBuilderTF2Test.test_invalid_faster_rcnn_batchnorm_update
+[ RUN      ] ModelBuilderTF2Test.test_invalid_first_stage_nms_iou_threshold
+[       OK ] ModelBuilderTF2Test.test_invalid_first_stage_nms_iou_threshold
+[ RUN      ] ModelBuilderTF2Test.test_invalid_model_config_proto
+[       OK ] ModelBuilderTF2Test.test_invalid_model_config_proto
+[ RUN      ] ModelBuilderTF2Test.test_invalid_second_stage_batch_size
+[       OK ] ModelBuilderTF2Test.test_invalid_second_stage_batch_size
+[ RUN      ] ModelBuilderTF2Test.test_session
+[  SKIPPED ] ModelBuilderTF2Test.test_session
+[ RUN      ] ModelBuilderTF2Test.test_unknown_faster_rcnn_feature_extractor
+[       OK ] ModelBuilderTF2Test.test_unknown_faster_rcnn_feature_extractor
+[ RUN      ] ModelBuilderTF2Test.test_unknown_meta_architecture
+[       OK ] ModelBuilderTF2Test.test_unknown_meta_architecture
+[ RUN      ] ModelBuilderTF2Test.test_unknown_ssd_feature_extractor
+[       OK ] ModelBuilderTF2Test.test_unknown_ssd_feature_extractor
+----------------------------------------------------------------------
+Ran 20 tests in 91.767s
+
+OK (skipped=1)
+Acquiring data`
+
+
+
 
 ### Récupération des images et traitement
 
